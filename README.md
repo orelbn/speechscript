@@ -1,7 +1,20 @@
 # SpeechScript
 
 Turn your voice into runnable code and demo it in your browser. 
-Project for nwHacks 
+Project for nwHacks 2022.
+
+## Inspiration
+
+## What it does
+
+## Technologyz
+
+## Challenges
+
+## Accomplishments
+
+## Business viability
+
 
 
 
