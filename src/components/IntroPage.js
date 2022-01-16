@@ -20,10 +20,10 @@ export default function IntroPage(props) {
                 <div className="title"><span className='dot' /><span className='title-speech'>speech</span><span className='title-script'>Script</span><span className='dot' /></div>
                 <div className='desc'>
                     <div className='tech'>tech
-                        <img className='tech-react' src={logo_react}/>
-                        <img className='tech-openai' src={logo_openAI}/>
-                        <img className='tech-sass' src={logo_sass}/>
-                        <img className='tech-azure' src={logo_azure}/>
+                        <a href="https://reactjs.org/" target="_blank"> <img className='tech-react' src={logo_react}/> </a>
+                        <a href="https://openai.com/" target="_blank"> <img className='tech-openai' src={logo_openAI}/> </a>
+                        <a href="https://sass-lang.com/" target="_blank"> <img className='tech-sass' src={logo_sass}/> </a>
+                        <a href="https://azure.microsoft.com/en-ca/" target="_blank"> <img className='tech-azure' src={logo_azure}/> </a>
                     </div>
                     <div className='insp'>
                         <div className='insp-title'>inspiration
@@ -34,10 +34,10 @@ export default function IntroPage(props) {
                         <p>scroll down to find out how</p>
                     </div>
                     <div className='team'>team
-                        <img className='image-size top-left' src={seungwon}/>
-                        <img className='image-size top-center' src={weike}/>
-                        <img className='image-size bottom-center-left' src={orel}/>
-                        <img className='image-size bottom-right' src={alex}/>
+                        <a href="https://github.com/limseung1" target="_blank"> <img className='image-size top-left' src={seungwon}/></a>
+                        <a href="https://github.com/weikequ" target="_blank"> <img className='image-size top-center' src={weike}/></a>
+                        <a href="https://github.com/orelbn" target="_blank"> <img className='image-size bottom-center-left' src={orel}/></a>
+                        <a href="https://github.com/alex-clements" target="_blank"> <img className='image-size bottom-right' src={alex}/></a>
                     </div>
                 </div>
             </div>
