@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 export default function ApplicationWrapper(props) {
 
     return (
-        <Container disableGutters={true} sx={{height: "100vh", overflowY: "scroll", scrollSnapType: "y mandatory", paddingLeft: "0px", paddingRight: "0px"}}>
+        <Container maxWidth={false} disableGutters={true} sx={{height: "100vh", overflowY: "scroll", scrollSnapType: "y mandatory"}}>
             <IntroPage />
             <Main />
         </Container>
