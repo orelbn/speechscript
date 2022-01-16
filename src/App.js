@@ -1,6 +1,4 @@
-import logo from './logo.svg';
 import ApplicationWrapper from './components/ApplicationWrapper';
-
 
 function App() {
   return (
