@@ -3,32 +3,44 @@
     color: white;
     font-family: "RobotoSlab";
     font-size: 72px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .title-script {
     color: white;
     font-family: "RobotoSlabBold";
     font-size: 72px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
+
+.dot {
+	height: 11px;
+	width: 11px;
+	background-color: white;
+	border-radius: 50%;
+	display: inline-block;
+	margin-bottom: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 .flex-column {
     display: flex;
     flex-flow: column wrap;
     gap: 3rem;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .logo {
     margin: 75px auto auto auto;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 
 }
 
 .title {
     margin: auto;
     text-align: center;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 
 }
 
@@ -40,12 +52,12 @@
     font-size: 18px;
     text-align: center;
     width: 335px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .desc-text-bold {
     font-family: "RobotoBold";
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .desc {
@@ -57,26 +69,51 @@
     justify-content: space-between;
     font-family: "RobotoSlabExtraBold";
     font-size: 36px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .tech{
     text-align: center;
+	position:relative;
     width: 400px;
     padding-top: 50px;
     margin-top: 10px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+}
+
+.tech-react{
+	position: absolute;
+	top: 28%;
+	left: 25%;
+}
+
+.tech-openai{
+	position: absolute;
+	top: 46%;
+	left: 72%;
+}
+
+.tech-sass{
+	position: absolute;
+	top: 50%;
+	left: 5%;
+}
+
+.tech-azure{
+	position: absolute;
+	top: 62.5%;
+	left: 45%;
 }
 
 .insp {
     text-align: center;
     width: 400px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .insp-text{
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     color: white;
     margin: auto;
     font-family: "RobotoLight";
@@ -84,20 +121,51 @@
     font-size: 18px;
     text-align: center;
     width: 335px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+}
 
+.insp-gh-icon {
+	padding-bottom: 10px;
 }
 
 .team {
     text-align: center;
+	position:relative;
     width: 400px;
     padding-top: 50px;
     margin-top: 10px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
+.top-left{
+	position: absolute;
+    top: 33%;
+    left: 20%;
+}
 
+.top-center {
+	position: absolute;
+    top: 33%;
+    left: 50%;
+	margin-left: 37.5px;
+}
 
+.bottom-center-left {
+	position: absolute;
+	top: 60%;
+	left: 35%;
+}
+.bottom-right {
+	position: absolute;
+	top: 60%;
+	left: 65%;
+	margin-left: 37.5px;
+}
+
+.image-size {
+	width: 100px;
+	height: 100px;
+}
 /* 
     ANIMATION STUFF BELOW
 */

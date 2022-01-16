@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
 import AceEditor from "react-ace";
 
-import 'ace-builds/webpack-resolver'
+//import 'ace-builds/webpack-resolver'
 import brace from 'brace';
 import "brace/mode/javascript";
 import "brace/mode/python";
