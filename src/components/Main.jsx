@@ -3,6 +3,7 @@ import { getCode } from '../script/fetchopenai'
 import fetchToken from '../scripts/fetchToken.js';
 import getTextFromMic from '../scripts/getTextFromMic';
 import { ResultReason } from 'microsoft-cognitiveservices-speech-sdk';
+import CodeIDE from './CodeIDE/CodeIDE';
 const speechsdk = require('microsoft-cognitiveservices-speech-sdk');
 
 export const Main = () => {
@@ -52,6 +53,7 @@ export const Main = () => {
             <h1>{displayText}</h1>
             <button onClick={handleOpenAIfetch}>Run</button>
             <button onClick={handleRecordSpeech}>Record Speec</button>
+            <CodeIDE />
         </div>
     )
 }
