@@ -6,17 +6,23 @@ import { ResultReason } from 'microsoft-cognitiveservices-speech-sdk';
 import Paper from '@mui/material/Paper'
 import Container from '@mui/material/Container';
 import CodeIDE from './CodeIDE/CodeIDE';
+import Heading from './CodeIDE/Heading.js';
+import Grid from '@mui/material/Grid';
+import LeftPanel from './CodeIDE/LeftPanel';
+import CenterPanel from './CodeIDE/CenterPanel';
+import RightPanel from './CodeIDE/RightPanel';
+
 const speechsdk = require('microsoft-cognitiveservices-speech-sdk');
 
 export const Main = () => {
     const [codeData, setcodeData] = useState("")
-    const [displayText, setDisplayText] = useState("Initial Text");
+    const [speechText, setSpeechText] = useState("");
 
     /**
      * fetches result from openAI API based on user's command, when user clicks Run
      */
     const handleOpenAIfetch = async() => {
-        const command = displayText
+        const command = speechText
         const codes =  await getCode(command)
         console.log(codes)
         setcodeData(codes.choices[0].text) // string
@@ -41,31 +47,41 @@ export const Main = () => {
             let displayText;
             if (result.reason === ResultReason.RecognizedSpeech) {
                 displayText = result.text;
-                setDisplayText(result.text);
+                setSpeechText(result.text);
             } else {
                 displayText = 'ERROR: Speech was cancelled or could not be recognized. Ensure your microphone is working properly.';
             }
     
-            console.log(displayText);
             return displayText
         });
     }
 
-    return (
-        <Container disableGutters={true} sx={{height: "100vh", scrollSnapAlign: "center", backgroundColor: "#2d1919"}}>
-            <h1>{displayText}</h1>
-            <button onClick={handleOpenAIfetch}>Run</button>
-            <button onClick={handleRecordSpeech}>Record Speec</button>
-            <input type="text" onChange={(e) => { 
-                console.log(e.target.value)
-                setDisplayText(e.target.value)
-            }} value={displayText}/>
+    const handleSpeechTextChange = (e) => {
+        setSpeechText(e);
+    }
 
-            <div>
-                <Paper sx={{margin:'auto'}}>
-                    <CodeIDE style={{margin:'auto'}} codeData={codeData}/>
-                </Paper>
-            </div>
+    return (
+        <Container sx={{height: "100vh", scrollSnapAlign: "center", backgroundColor: "#2d1919", width: "100vw"}}>
+            <Heading />
+            <Container disableGutters={true} maxWidth={false}>
+                
+                <Grid container spacing={2}>
+                    <Grid item xs={5}>
+                        <LeftPanel onRunClick={handleOpenAIfetch}
+                                   onRecordSpeech={handleRecordSpeech} 
+                                   onSpeechTextChange={handleSpeechTextChange}
+                                   speechText={speechText}
+                                   codeData={codeData}
+                        />
+                    </Grid>
+                    <Grid item xs={2}>
+                        <CenterPanel />
+                    </Grid>
+                    <Grid item xs={5}>
+                        <RightPanel codeData={codeData} />
+                    </Grid>
+                </Grid>
+            </Container>
         </Container>
     )
 }
