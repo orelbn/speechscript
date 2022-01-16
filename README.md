@@ -7,7 +7,7 @@ Project for nwHacks 2022.
 
 ## What it does
 
-## Technologyz
+## Technology
 
 ## Challenges
 
