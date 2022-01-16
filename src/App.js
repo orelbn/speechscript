@@ -1,12 +1,11 @@
 import logo from './logo.svg';
-import './App.css';
-import Main from './components/Main';
+import ApplicationWrapper from './components/ApplicationWrapper';
 
 
 function App() {
   return (
     <div className="App">
-      <Main />
+      <ApplicationWrapper />
     </div>
   );
 }
