@@ -3,6 +3,8 @@ import { getCode } from '../script/fetchopenai'
 import fetchToken from '../scripts/fetchToken.js';
 import getTextFromMic from '../scripts/getTextFromMic';
 import { ResultReason } from 'microsoft-cognitiveservices-speech-sdk';
+import Paper from '@mui/material/Paper'
+import CodeIDE from './CodeIDE/CodeIDE';
 const speechsdk = require('microsoft-cognitiveservices-speech-sdk');
 
 export const Main = () => {
@@ -13,9 +15,10 @@ export const Main = () => {
      * fetches result from openAI API based on user's command, when user clicks Run
      */
     const handleOpenAIfetch = async() => {
-        const command = "Add a button and center into the middle of the page"
+        const command = displayText
         const codes =  await getCode(command)
-        setcodeData(codes.choices[0].text)
+        console.log(codes)
+        setcodeData(codes.choices[0].text) // string
         console.log(codes.choices[0].text)
     }
 
@@ -52,6 +55,17 @@ export const Main = () => {
             <h1>{displayText}</h1>
             <button onClick={handleOpenAIfetch}>Run</button>
             <button onClick={handleRecordSpeech}>Record Speec</button>
+            
+            <input type="text" onChange={(e) => { 
+                console.log(e.target.value)
+                setDisplayText(e.target.value)
+            }} value={displayText}/>
+
+            <div>
+                <Paper sx={{margin:'auto'}}>
+                    <CodeIDE style={{margin:'auto'}} codeData={codeData}/>
+                </Paper>
+            </div>
         </div>
     )
 }
