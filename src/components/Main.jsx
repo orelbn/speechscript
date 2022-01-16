@@ -52,7 +52,7 @@ export const Main = () => {
     }
 
     return (
-        <Container sx={{height: "100vh", scrollSnapAlign: "center"}}>
+        <Container disableGutters={true} sx={{height: "100vh", scrollSnapAlign: "center", backgroundColor: "#2d1919"}}>
             <h1>{displayText}</h1>
             <button onClick={handleOpenAIfetch}>Run</button>
             <button onClick={handleRecordSpeech}>Record Speec</button>
