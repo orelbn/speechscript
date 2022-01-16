@@ -2,6 +2,7 @@
 
 Turn your voice into runnable code and demo it in your browser. 
 Project for nwHacks 2022.
+Demo video can be found [here](https://www.youtube.com/watch?v=JrQcm6AKBpE).
 
 ## Inspiration
 What if you could just say whatever, and the code could just magically pop out? Created for nwHacks 2022, speechScript can take your lovely voice and convert it directly to code.
