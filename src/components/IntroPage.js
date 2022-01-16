@@ -15,20 +15,20 @@ export default function IntroPage(props) {
                 <div className="title"><span className='title-speech'>speech</span><span className='title-script'>Script</span></div>
                 <div className='desc-text'></div>
                 <div className='desc'>
-                    <div className='tech-desc-title'>tech
+                    <div className='tech'>tech
                             {/* <img src={logo_react} alt="React Icon"/>
                             <img src={logo_openAI} alt="openAI Icon"/>
                             <img src={logo_sass} alt="Sass Icon"/>
                             <img src={logo_azure} alt="Azure Icon"/> */}
                     </div>
-                    <div className='insp-desc'>
-                        <div className='insp-desc-title'>inspiration
-                            <div className='insp-desc-text'>What if you could just say whatever, and the code could just <span className='desc-text-bold'>magically</span> pop out and run? Created for nwHacks 2022, speechScript can take your lovely voice and convert it directly to code.</div>
+                    <div className='insp'>
+                        <div className='insp-title'>inspiration
+                            <div className='insp-text'>What if you could just say whatever, and the code could just <span className='desc-text-bold'>magically</span> pop out and run? Created for nwHacks 2022, speechScript can take your lovely voice and convert it directly to code.</div>
                         </div>
                         <div class="mouse"></div>
                         <p>scroll down to find out how</p>
                     </div>
-                    <div className='team-desc'>team</div>
+                    <div className='team'>team</div>
                 </div>
             </div>
 

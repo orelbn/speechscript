@@ -3,32 +3,32 @@
     color: white;
     font-family: "RobotoSlab";
     font-size: 72px;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
 .title-script {
     color: white;
     font-family: "RobotoSlabBold";
     font-size: 72px;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 .flex-column {
     display: flex;
     flex-flow: column wrap;
     gap: 3rem;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
 .logo {
     margin: 75px auto auto auto;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 
 }
 
 .title {
     margin: auto;
     text-align: center;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 
 }
 
@@ -40,12 +40,12 @@
     font-size: 18px;
     text-align: center;
     width: 335px;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
 .desc-text-bold {
     font-family: "RobotoBold";
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
 .desc {
@@ -57,24 +57,24 @@
     justify-content: space-between;
     font-family: "RobotoSlabExtraBold";
     font-size: 36px;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
-.tech-desc{
+.tech{
     text-align: center;
     width: 400px;
     padding-top: 50px;
     margin-top: 10px;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
-.insp-desc {
+.insp {
     text-align: center;
     width: 400px;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
-.insp-desc-text{
+.insp-text{
     padding-top: 30px;
     padding-bottom: 30px;
     color: white;
@@ -84,22 +84,18 @@
     font-size: 18px;
     text-align: center;
     width: 335px;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 
 }
 
-.team-desc-title {
+.team {
     text-align: center;
     width: 400px;
     padding-top: 50px;
     margin-top: 10px;
-    /* border: 1px solid white; */
+    border: 1px solid white;
 }
 
-.tech-desc {
-    padding:0;
-    margin:0;
-}
 
 
 /* 
