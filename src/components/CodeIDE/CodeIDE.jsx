@@ -1,31 +1,3 @@
-<<<<<<< HEAD
-import React, {useState, useEffect, useRef} from 'react';
-
-export default function CodeIDE(props) {
-    const thisRef = useRef(null);
-    useEffect(() => {
-        // thisRef.current.eval(myString);
-    }, [])
-
-    const myString = "var myDiv = document.createElement('div'); myDiv.id = 'testing'; myDiv.style.backgroundColor='red';";
-
-    const Test = () => {
-        return (
-            <h1>testing</h1>
-        )
-    }
-
-    return (
-        <div>
-            {/* <iframe width="500" height="500" ref={thisRef} src={Test}>
-                <div>
-                    <h1>test</h1>
-                </div>
-                </iframe> */}
-        </div>
-    )
-}
-=======
 import React, { useState, useEffect } from "react";
 import { render } from "react-dom";
 import AceEditor from "react-ace";
@@ -69,4 +41,3 @@ const CodeIDE = ({codeData}) => {
 };
 
 export default CodeIDE;
->>>>>>> 60aad1cfcc04a64634c359e78aeada3a643711cb
