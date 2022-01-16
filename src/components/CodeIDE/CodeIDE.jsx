@@ -20,8 +20,9 @@ const CodeIDE = ({codeData}) => {
 
 
   return (
+
       <AceEditor
-        style={{height:450, width:"100%"}}
+        style={{borderRadius: 10, height: 450, width:"100%", backgroundColor:"rgba(0,0,0.38)"}}
         value={codeData}
         mode="javascript"
         theme="twilight"
@@ -36,6 +37,7 @@ const CodeIDE = ({codeData}) => {
             tabSize: 2,
         }}
       />
+  
       
   );
 };
