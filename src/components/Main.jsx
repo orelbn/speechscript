@@ -19,19 +19,25 @@ export const Main = () => {
         console.log(codes.choices[0].text)
     }
 
+    /**
+     * Function grabs Speech to Text API token and passes it to the recognizeSpeechCallback function.
+     */
     const handleRecordSpeech = () => {
         fetchToken().then(response => {
-            secondCallback(getTextFromMic(response));
+            recognizeSpeechCallback(getTextFromMic(response));
         })
     }
 
-    const secondCallback = (recognizer) => {
+    /**
+     * Gets the text from recorded speech and sets state variable with text.
+     * @param {speechsdk.SpeechRecognizer} recognizer 
+     */
+    const recognizeSpeechCallback = (recognizer) => {
         recognizer.recognizeOnceAsync(result => {
             let displayText;
             if (result.reason === ResultReason.RecognizedSpeech) {
                 displayText = result.text;
                 setDisplayText(result.text);
-
             } else {
                 displayText = 'ERROR: Speech was cancelled or could not be recognized. Ensure your microphone is working properly.';
             }
