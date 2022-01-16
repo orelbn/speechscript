@@ -1,5 +1,6 @@
 import { React, useState } from 'react'
 import { getCode } from '../script/fetchopenai'
+import CodeIDE from './CodeIDE/CodeIDE'
 
 export const Main = () => {
     const [codeData, setcodeData] = useState("")
@@ -16,6 +17,8 @@ export const Main = () => {
     return (
         <div>
             <button onClick={handleOpenAIfetch}>Run</button>
+
+            <CodeIDE />
         </div>
     )
 }
