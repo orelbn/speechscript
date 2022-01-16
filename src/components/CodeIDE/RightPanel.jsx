@@ -11,11 +11,7 @@ export default function RightPanel(props) {
         script.append(`window.onload = function () {${props.codeData}}`);
         iframeDoc.documentElement.appendChild(script);
         frame.contentWindow.location.reload(true);
-
-
     }, [props.codeData])
-
-    
 
     const styleProps = {
         width: "100%",
