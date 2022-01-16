@@ -21,7 +21,7 @@ const CodeIDE = ({codeData}) => {
 
   return (
       <AceEditor
-        style={{margin:'auto'}}
+        style={{height:450, width:"100%"}}
         value={codeData}
         mode="javascript"
         theme="twilight"
