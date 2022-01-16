@@ -4,6 +4,7 @@ import fetchToken from '../scripts/fetchToken.js';
 import getTextFromMic from '../scripts/getTextFromMic';
 import { ResultReason } from 'microsoft-cognitiveservices-speech-sdk';
 import Paper from '@mui/material/Paper'
+import Container from '@mui/material/Container';
 import CodeIDE from './CodeIDE/CodeIDE';
 const speechsdk = require('microsoft-cognitiveservices-speech-sdk');
 
@@ -51,11 +52,10 @@ export const Main = () => {
     }
 
     return (
-        <div>
+        <Container sx={{height: "100vh", scrollSnapAlign: "center"}}>
             <h1>{displayText}</h1>
             <button onClick={handleOpenAIfetch}>Run</button>
             <button onClick={handleRecordSpeech}>Record Speec</button>
-            <CodeIDE />
             <input type="text" onChange={(e) => { 
                 console.log(e.target.value)
                 setDisplayText(e.target.value)
@@ -66,7 +66,7 @@ export const Main = () => {
                     <CodeIDE style={{margin:'auto'}} codeData={codeData}/>
                 </Paper>
             </div>
-        </div>
+        </Container>
     )
 }
 
