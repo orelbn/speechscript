@@ -73,7 +73,7 @@ export const Main = () => {
     }
 
     return (
-        <Container ref={containerRef} sx={{height: "100vh", scrollSnapAlign: "center", backgroundColor: "#2d1919", width: "100vw"}}>
+        <Container ref={containerRef} sx={{height: "100vh", scrollSnapAlign: "center", width: "100vw"}}>
             <Heading />
             <Container disableGutters={true} maxWidth={false} sx={{height: "80vh"}}>
                 <Grid container spacing={2}>
