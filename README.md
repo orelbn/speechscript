@@ -37,9 +37,6 @@ It can help those who might struggle using the keyboard and make coding easier. 
 
 \*Note\* This application requires that the user have access to the [Microsoft Azure Speech Services API](https://azure.microsoft.com/en-us/services/cognitive-services/speech-to-text/#overview) and the [OpenAI Codex engine API](https://openai.com/blog/openai-codex/).
 
-
-
-
 To download and set up the application:
 
 - Clone this git repository
@@ -57,3 +54,7 @@ To run the speechScript application:
 - Click the `Record` button at the bottom of the screen and begin talking
 - After a moment of silence, the application will determine what was said
 - Click `Execute` to generate the javascript code and run it!
+
+## Future Improvements
+- Include more programming languages for code generation
+- Automatic execution recorded speech
