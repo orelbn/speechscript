@@ -15,7 +15,7 @@ const fetchToken =  async () => {
         };
         try {
             const tokenResponse = await axios.post(`https://${speechRegion}.api.cognitive.microsoft.com/sts/v1.0/issueToken`, null, headers);
-            const return_object = { token: tokenResponse.data, region: speechRegion }
+            const return_object = { authToken: tokenResponse.data, region: speechRegion }
             return return_object;
         } catch (err) {
             console.log("there was an error")

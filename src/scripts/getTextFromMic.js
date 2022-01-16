@@ -1,9 +1,8 @@
 import fetchToken from './fetchToken.js';
 import { ResultReason } from 'microsoft-cognitiveservices-speech-sdk';
-import speechsdk from 'microsoft-cognitiveservices-speech-sdk';
+const speechsdk = require('microsoft-cognitiveservices-speech-sdk');
 
-const getTextFromMic = async () => {
-    const tokenObj = await fetchToken();
+const getTextFromMic = (tokenObj) => {
     const speechConfig = speechsdk.SpeechConfig.fromAuthorizationToken(tokenObj.authToken, tokenObj.region);
     speechConfig.speechRecognitionLanguage = 'en-US';
     
@@ -11,6 +10,8 @@ const getTextFromMic = async () => {
     const recognizer = new speechsdk.SpeechRecognizer(speechConfig, audioConfig);
 
     console.log("speak into your microphone")
+
+    return recognizer;
 
     return recognizer.recognizeOnceAsync(result => {
         let displayText;
