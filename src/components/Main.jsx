@@ -1,4 +1,4 @@
-import { React, useState } from 'react'
+import { React, useState, useRef, useEffect } from 'react'
 import { getCode } from '../script/fetchopenai'
 import fetchToken from '../scripts/fetchToken.js';
 import getTextFromMic from '../scripts/getTextFromMic';
@@ -12,11 +12,21 @@ import LeftPanel from './CodeIDE/LeftPanel';
 import CenterPanel from './CodeIDE/CenterPanel';
 import RightPanel from './CodeIDE/RightPanel';
 
+
 const speechsdk = require('microsoft-cognitiveservices-speech-sdk');
 
 export const Main = () => {
     const [codeData, setcodeData] = useState("")
     const [speechText, setSpeechText] = useState("");
+    const containerRef = useRef(null);
+    const [containerHeight, setContainerHeight] = useState(500);
+    const [recording, setRecording] = useState(false);
+    
+    useEffect(() => {
+        const newContainerHeight = containerRef.current.getBoundingClientRect().height;
+        setContainerHeight(newContainerHeight);
+        console.log(newContainerHeight);
+    }, [])
 
     /**
      * fetches result from openAI API based on user's command, when user clicks Run
@@ -34,6 +44,7 @@ export const Main = () => {
      */
     const handleRecordSpeech = () => {
         fetchToken().then(response => {
+            setRecording(true);
             recognizeSpeechCallback(getTextFromMic(response));
         })
     }
@@ -47,6 +58,7 @@ export const Main = () => {
             let displayText;
             if (result.reason === ResultReason.RecognizedSpeech) {
                 displayText = result.text;
+                setRecording(false);
                 setSpeechText(result.text);
             } else {
                 displayText = 'ERROR: Speech was cancelled or could not be recognized. Ensure your microphone is working properly.';
@@ -61,10 +73,9 @@ export const Main = () => {
     }
 
     return (
-        <Container sx={{height: "100vh", scrollSnapAlign: "center", width: "100vw"}}>
+        <Container ref={containerRef} sx={{height: "100vh", scrollSnapAlign: "center", width: "100vw"}}>
             <Heading />
-            <Container disableGutters={true} maxWidth={false}>
-                
+            <Container disableGutters={true} maxWidth={false} sx={{height: "80vh"}}>
                 <Grid container spacing={2}>
                     <Grid item xs={5}>
                         <LeftPanel onRunClick={handleOpenAIfetch}
@@ -72,6 +83,7 @@ export const Main = () => {
                                    onSpeechTextChange={handleSpeechTextChange}
                                    speechText={speechText}
                                    codeData={codeData}
+                                   recording={recording}
                         />
                     </Grid>
                     <Grid item xs={2}>
