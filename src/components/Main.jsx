@@ -61,7 +61,7 @@ export const Main = () => {
     }
 
     return (
-        <Container sx={{height: "100vh", scrollSnapAlign: "center", backgroundColor: "#2d1919", width: "100vw"}}>
+        <Container sx={{height: "100vh", scrollSnapAlign: "center", width: "100vw"}}>
             <Heading />
             <Container disableGutters={true} maxWidth={false}>
                 
