@@ -16,14 +16,14 @@ export default function RightPanel(props) {
 
     const styleProps = {
         width: "100%",
-        height: "75%"
+        height: "100%",
     }
 
 
     return (
 
     <>
-    <iframe src="./test.html" id="iframeTest" sandbox="allow-scripts allow-same-origin" width="400px" height="500px">
+    <iframe src="./test.html" id="iframeTest" sandbox="allow-scripts allow-same-origin" width="400px" height="600px" style={{"borderRadius": "10px", borderWidth: "0px"}}>
         
     </iframe>
     </>
