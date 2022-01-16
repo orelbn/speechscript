@@ -35,7 +35,10 @@ It can help those who might struggle using the keyboard and make coding easier. 
 
 ## Instructions
 
-\*Note\* This application requires that the user have access to the Microsoft Azure Speech Services API and the OpenAI Codex engine API.
+\*Note\* This application requires that the user have access to the [Microsoft Azure Speech Services API](https://azure.microsoft.com/en-us/services/cognitive-services/speech-to-text/#overview) and the [OpenAI Codex engine API](https://openai.com/blog/openai-codex/).
+
+
+
 
 To download and set up the application:
 
